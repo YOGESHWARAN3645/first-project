@@ -1,0 +1,63 @@
+html
+{
+    background-color: rgb(228, 228, 228);
+    font-family: "Times New Roman";
+}
+#loginDivision
+{
+    margin:auto;
+    text-align: center;
+    color:rgb(19, 19, 109);
+}
+#CompanyName
+{
+   font-size: 48px;
+}
+img
+{
+    width: 48px;
+    height:48px
+}
+#loginPageBox 
+{
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    margin:auto;
+    font-size: 24px;
+    line-height:2;
+}
+#loginboxName
+{
+    font-size:18;
+    word-spacing: 0.25cm;
+    background-color: rgb(19, 19, 109); 
+    color: rgb(222, 222, 238); 
+    padding-left: 3.5%;
+    padding-right: 3.5%;
+    width: 280px;
+    margin: auto;
+}
+.labelInLoginBox
+{  
+    font-size:24px;
+    
+}
+.fieldInLoginBox
+{
+    font-size: 20px;;
+    text-decoration-color:rgb(19, 19, 109);
+    background-color: white;
+    border-color: rgb(19, 19, 109);
+}
+.buttonInLoginBox
+{
+    color: white;
+    background-color:rgb(19, 19, 109);
+    border-color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-left: 3%;
+}	
