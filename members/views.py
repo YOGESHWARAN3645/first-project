@@ -40,3 +40,8 @@ def testing(request):
     'mymembers': mydata,
   }
   return HttpResponse(template.render(context, request))
+
+def logindetails(request):
+    username = request.GET["name"]
+    password= request.GET["password"]
+    return render(request,"logindetails.html",{'username':username,'password':password})

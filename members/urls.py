@@ -7,5 +7,6 @@ urlpatterns = [
     path('members/', views.members),
     path('members/details/<int:id>', views.details),
     path('test/', views.testing),
+    path('login/logindetailspage/',views.logindetails)
     
 ]

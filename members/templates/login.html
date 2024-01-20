@@ -3,7 +3,10 @@
 <title>Login page</title>
     <link rel="stylesheet" href="{% static 'login.css' %}">
 	<link rel="icon"  href="https://iconape.com/wp-content/files/ms/160229/png/lmw-logo.png">
-		<form  id="loginForm" method="POST">
+	<body>
+	{% block content %}
+		<form  id="loginForm" action="logindetailspage/" >
+			{% csrf_token %}
 			<div id="loginDivision">
 				<div id="CompanyName">					
 					<span><img src="https://iconape.com/wp-content/files/ms/160229/png/lmw-logo.png"></span>
@@ -14,35 +17,14 @@
 				<div id="loginPageBox">
 					
 					<p id= "loginBoxName">EMPLOYEE LOGIN PAGE</p>
-					<label id="username" class="labelInLoginBox">Username</label>
-					<input type= "text" id="user" class="fieldInLoginBox" required><br>
+					<label id="username" class="labelInLoginBox" >Username</label>
+					<input type= "text" id="user" class="fieldInLoginBox"name="name" required><br>
 					<label id= "password" class="labelInLoginBox">Password</label>
-					<input type="password" id=passwd class="fieldInLoginBox" required><br>
-					<button id= "submit" class="buttonInLoginBox" onclick="return validate()">Submit</button>
-					<button id="reset" class="buttonInLoginBox" onclick="clearing()">Reset</button>
+					<input type="password" id=passwd class="fieldInLoginBox" name="password"required><br>
+					<button id= "submit" class="buttonInLoginBox" value="=Submit">Submit</button>
+					<button id="reset" class="buttonInLoginBox">Reset</button>
 				</div>
 			</div>
-	
+	{% endblock %}
 	</body>
-	<script>
-		function validate()
-		{
-			var userName = document.getElementById("user").value;
-			var password= document.getElementById("passwd").value;
-			if(userName =="yogi" && password==12345)
-			{
-				alert("Succesfully login");
-				window.location.href = "http://localhost:8000/home"; 
-				return false;
-			}
-			else
-			{
-				alert(" Invalid ");
-			}
-		}
-		function clearing(){
-			document.getElementById('user').value='' ;
-			document.getElementById('passwd').value='' ;
-		}
-	</script>
 </html>

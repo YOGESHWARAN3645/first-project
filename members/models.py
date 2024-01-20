@@ -8,6 +8,10 @@ class Member(models.Model):
   
   def __str__(self):
     return f"{self.firstname} {self.lastname}"
+
+class logindetails(models.Model):
+  username= models.CharField(max_length=15)
+  password= models.CharField(max_length=15)
   
 
 
